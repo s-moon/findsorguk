@@ -37,7 +37,7 @@ echo $this->findSpotEditDeleteLink()->setController($controller)
                 Find objects within:
             </p>
 
-            <div class="btn-group">
+            <div class="btn-group" id="radius-buttons">
                 <?php foreach ($distance as $range): ?>
                     <a class="btn btn-mini btn-success" href="<?php echo $this->url(array(
                         'module' => 'database', 'controller' => 'search', 'action' => 'results',
@@ -199,9 +199,9 @@ echo $this->findSpotEditDeleteLink()->setController($controller)
     });
     <?php $this->inlineScript()->captureEnd(); ?>
 <?php endif; ?>
-    <div class="row-fluid">
+    <div class="row-fluid" id="spatial-discovery">
 
-    <div class="span4">
+    <div class="span4" id="spatial-metadata">
         <h3 class="lead">Spatial metadata</h3>
 
         <p>
@@ -258,7 +258,7 @@ echo $this->findSpotEditDeleteLink()->setController($controller)
 
     </div>
 
-    <div class="span4">
+    <div class="span4" id="spatial-coords">
 <?php if (!is_null($this->gridref)): ?>
     <h3 class="lead">Spatial coordinates</h3>
 
@@ -304,7 +304,7 @@ echo $this->findSpotEditDeleteLink()->setController($controller)
         $discovery = array($this->discmethod, $this->disccircum, $this->curr_loc, $this->landvalue, $this->landuse);
         if (array_filter($discovery)):
             ?>
-            <div class="span4">
+            <div class="span4" id="discovery-metadata">
                 <h3 class="lead">Discovery metadata</h3>
 
                 <p>
@@ -359,7 +359,7 @@ $details = array(
 );
 ?>
 <?php if (array_filter($details)): ?>
-    <div class="row-fluid">
+    <div class="row-fluid" id="findspot-data">
         <p>
             <?php if (!is_null($this->findspotDescription)): ?>
                 Find spot description: <?php echo strip_tags($this->findspotDescription); ?>

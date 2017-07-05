@@ -17,7 +17,7 @@
 <div typeof="crm:E22_Man-Made_Object" about="<?php echo $this->curUrl(); ?>" class="record">
 <!--  Start of main body of record -->
 
-<div class="row-fluid">
+<div class="row-fluid" id="record-body">
 
 <?php echo $this->partialLoop('partials/database/structural/recordHeadTitle.phtml', $this->finds); ?>
 <?php echo $this->partialLoop('partials/database/structural/zoteroRecord.phtml', $this->finds); ?>
@@ -64,7 +64,7 @@
                 <?php endif; ?>
 
                 <!-- The image link addition -->
-                <div class="btn-group">
+                <div class="btn-group" id="image-buttons">
                     <?php
                     echo $this->imageLink()
                         ->setFindID($this->finds[0]['id'])
@@ -190,7 +190,7 @@
 
 
     <!-- Start of the spatial data -->
-    <div class="row-fluid">
+    <div class="row-fluid" id="spatial-data">
         <!-- Render the map and findspot data -->
 
         <?php if (!is_null($this->finds[0]['findSpotID'])) : ?>

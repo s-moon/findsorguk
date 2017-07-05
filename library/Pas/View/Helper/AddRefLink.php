@@ -362,7 +362,7 @@ class Pas_View_Helper_AddRefLink extends Zend_View_Helper_Abstract
     {
         $url = $this->view->url($this->urlBuild(), null, true);
         $html = '';
-        $html .= '<div id="addref" class="noprint">';
+        $html .= '<div id="add-reference" class="noprint">';
         $html .= '<a class="btn btn-small btn-primary" href="';
         $html .= $url;
         $html .= '" title="Add a reference"';

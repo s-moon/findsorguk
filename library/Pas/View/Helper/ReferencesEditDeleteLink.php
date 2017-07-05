@@ -350,7 +350,7 @@ class Pas_View_Helper_ReferencesEditDeleteLink extends Zend_View_Helper_Abstract
         $editClass = 'btn btn-mini btn-warning';
         $deleteClass = 'btn btn-mini btn-danger';
         $html = '';
-        $html .= '<span class="noprint"><div class="btn-group"><a class="';
+        $html .= '<span class="noprint"><div class="btn-group" id="edit-delete-reference"><a class="';
         $html .= $editClass;
         $html .= '" href="';
         $html .= $editUrl;
