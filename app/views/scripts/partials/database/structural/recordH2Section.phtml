@@ -4,6 +4,5 @@
     <?php if (!is_null($this->objecttypecert)): ?>
         Object type certainty: <?php echo $this->certainty()->setCertainty($this->objecttypecert); ?><br/>
     <?php endif; ?>
-    Workflow
-    status: <?php echo $this->workflowStatus()->setWorkflow($this->secwfstage); ?> <?php echo $this->workflow()->setWorkflow($this->secwfstage); ?>
+    <span id="workflowstatus">Workflow status: <?php echo $this->workflowStatus()->setWorkflow($this->secwfstage); ?> <?php echo $this->workflow()->setWorkflow($this->secwfstage); ?></span>
 </p>
