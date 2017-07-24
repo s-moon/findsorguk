@@ -9,8 +9,8 @@
 $this->headTitle('Unavailable record');
 $this->metaBase()->setDescription('This record is unavailable to you at present')->generate();
 ?>
-<h2 class="lead"><?php echo $this->title(); ?>: <?php echo $this->finds[0]['old_findID']; ?></h2>
-<p>
+<h2 class="lead" id="unavailable-heading"><?php echo $this->title(); ?>: <?php echo $this->finds[0]['old_findID']; ?></h2>
+<p id="record-details">
     Object type: <?php echo $this->finds[0]['objecttype']; ?><br/>
 
     <?php if (array_key_exists('broadperiod', $this->finds[0])): ?>
@@ -34,7 +34,7 @@ $this->metaBase()->setDescription('This record is unavailable to you at present'
         Last updated: <?php echo $this->timeAgoInWords($this->finds[0]['updated']); ?>
     <?php endif; ?>
 </p>
-<p>
+<p id="unavailable-message">
     This record is currently unavailable to view for your access levels. Please contact the relevant FLO to gain
     access.
 </p>
